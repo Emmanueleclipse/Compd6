@@ -150,16 +150,16 @@ export default {
     links: [
       { name: "home", link: "/" },
       { name: "about us", link: "about" },
-      { name: "support", link: "#" },
+      { name: "support", link: "#" }
     ],
     signuup: "#",
-    appleBtn: "#",
+    appleBtn: "#"
   }),
   filters: {
     UpCase(value) {
       return value.toUpperCase();
-    },
-  },
+    }
+  }
 };
 </script>
 <style>
