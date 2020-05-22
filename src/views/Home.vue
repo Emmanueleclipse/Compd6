@@ -29,7 +29,7 @@
           <q-btn
             color="white"
             text-color="primary"
-            class="text-weight-bold lt-md"
+            class="text-weight-bold q-mb-sm lt-md"
             style="border-radius:10px ; letter-spacing:-1px "
           >
             sign up
@@ -140,6 +140,7 @@
               </q-card-section>
               <q-card-actions>
                 <q-btn
+                  style="margin-left:-10px"
                   type="a"
                   target="_blank"
                   :href="AppSrore"
@@ -151,6 +152,7 @@
               </q-card-actions>
               <q-card-actions>
                 <q-btn
+                  style="margin-left:-10px"
                   type="a"
                   target="_blank"
                   :href="PlayStore"
@@ -274,7 +276,9 @@
                     <q-item-section avatar>
                       <q-avatar square>
                         <img
-                          :src="require('@/assets/wheel/' + selectedCircleItem.img)"
+                          :src="
+                            require('@/assets/wheel/' + selectedCircleItem.img)
+                          "
                         />
                       </q-avatar>
                     </q-item-section>
@@ -320,8 +324,13 @@
                         </q-item-label>
                       </q-item-section>
                       <q-item-section avatar>
-                        <q-avatar  square>
-                          <img  :src="require('@/assets/wheel/' + selectedCircleItem.img)"/>
+                        <q-avatar square>
+                          <img
+                            :src="
+                              require('@/assets/wheel/' +
+                                selectedCircleItem.img)
+                            "
+                          />
                         </q-avatar>
                       </q-item-section>
                     </q-item>
@@ -339,7 +348,13 @@
       </div>
     </div>
     <!-- Section: Testimonial -->
-    <div class="row section section-testimonial bg-positive">
+    <div class="row section section-testimonial bg-positive relative-position	">
+      <q-img
+        class="absolute-top-left quote "
+        contain
+        :src="require('@/assets/Quote.png')"
+      >
+      </q-img>
       <!-- desktop view  -->
       <div class="col gt-sm">
         <div class="row">
@@ -847,6 +862,11 @@ export default {
 .carousel-card {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
+.quote {
+  width: 10% !important;
+  top: 10% !important;
+  left: 10% !important;
+}
 /* End section */
 .EndBtn {
   border-radius: 10px !important;
@@ -860,6 +880,7 @@ export default {
 .EndDec {
   font-size: 22px !important;
 }
+
 @media only screen and (min-device-width: 427px) and (max-device-width: 768px) {
   .banner {
     margin-top: 5% !important ;
@@ -937,6 +958,13 @@ export default {
   }
   .Text-Row {
     margin-top: 10%;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .quote {
+    width: 50% !important;
+    top: 5% !important;
+    left: 5% !important;
   }
 }
 

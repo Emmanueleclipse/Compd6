@@ -92,8 +92,8 @@
         </div>
       </div>
       <div class="col-12">
-        <div class="row q-mt-lg q-pt-lg justify-center ">
-          <div class="col-12 text-center q-gutter-lg">
+        <div class="row q-mt-sm q-pt-lg justify-center ">
+          <div class="col-12 text-center q-gutter-lg gt-xs">
             <q-btn
               :to="CreateAccount"
               size="lg"
@@ -110,6 +110,28 @@
               text-color="white"
               flat
               class="q-py-sm text-weight-bold q-px-md "
+            >
+              <q-icon left name="mdi-information"></q-icon> LEARN MORE</q-btn
+            >
+          </div>
+          <!-- Mobile Buttons -->
+          <div class="col-11 text-center q-gutter-sm lt-sm">
+            <q-btn
+              :to="CreateAccount"
+              size="md"
+              color="white"
+              text-color="primary"
+              class="text-weight-bold  q-px-sm"
+              style="border-radius:7px; letter-spacing:0px  "
+            >
+              sign up
+            </q-btn>
+            <q-btn
+              :to="LearnMore"
+              style="background-color: rgba(0,0,0,0.2) ; border-radius:7px;"
+              text-color="white"
+              flat
+              class="q-py-xs text-weight-bold q-px-sm "
             >
               <q-icon left name="mdi-information"></q-icon> LEARN MORE</q-btn
             >
@@ -289,8 +311,8 @@ export default {
   data: () => ({
     CreateAccount: "#",
     LearnMore: "#",
-    support: "#"
-  })
+    support: "#",
+  }),
 };
 </script>
 

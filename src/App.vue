@@ -1,7 +1,7 @@
 <template>
   <q-layout class="compd" view="hHh lpR fFf">
     <q-header reveal class="bg-white q-pa-md">
-      <q-toolbar class="margin ">
+      <q-toolbar class="margin">
         <a href="/">
           <img class="logo" contain src="@/assets/logo.png" />
         </a>
@@ -82,17 +82,10 @@
               99 Wall St #4000, New York, NY 10005
             </div>
           </div>
-          <div class="col col-md-5 col-11 q-mb-sm">
-            <div class="row justify-center text-center">
-              <div class="col col-12">
-                <q-btn
-                  class="q-ml-sm"
-                  type="a"
-                  target="_blank"
-                  :href="appleBtn"
-                  flat
-                  dense
-                >
+          <div class="col col-md-5 col-12 q-mb-sm">
+            <div class="row text-center items-center btnRow">
+              <div class="col col-12 q-gutter-md ">
+                <q-btn type="a" target="_blank" :href="appleBtn" flat dense>
                   <img class="" src="@/assets/appStore.png" />
                 </q-btn>
                 <q-btn
@@ -100,7 +93,7 @@
                   text-color="primary"
                   flat
                   style="border-radius:8px;"
-                  class=" q-ml-sm btn bg-grey-12 text-weight-bold"
+                  class="btn bg-grey-12 text-weight-bold"
                   >login or sign up
                 </q-btn>
               </div>
@@ -206,6 +199,22 @@ body {
   .logo {
     width: auto;
     height: 22px;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .btnRow {
+    text-align: left !important;
+    padding-left: 2em;
+  }
+}
+@media only screen and (max-device-width: 426px) {
+  .btnRow {
+    padding-left: 1em;
+  }
+}
+@media only screen and (max-device-width: 321px) {
+  .btnRow {
+    padding-left: 0.5em;
   }
 }
 </style>
